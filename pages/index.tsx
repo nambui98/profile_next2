@@ -21,6 +21,14 @@ const Home: NextPage = () => {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
+        <div className={styles.heroImage}>
+          <Image
+            src="/large-image.jpg"
+            alt="Large Image"
+            width={3048}
+            height={2024}
+          />
+        </div>
 
         <p className={styles.description}>
           Get started by editing{' '}
