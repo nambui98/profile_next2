@@ -1,7 +1,7 @@
-import useTranslation from 'next-translate/useTranslation';
 import React from 'react';
+import useTranslation from 'next-translate/useTranslation';
 
-export default function contact() {
+export default function Contact() {
     const { t } = useTranslation('common')
     return (
         <div className=" rounded-3xl bg-app dark:bg-neutral-800 shadow-3xl dark:shadow-3xl-dark relative w-full h-full scroll-mb-1 p-6 relative " >
