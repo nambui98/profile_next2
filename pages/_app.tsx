@@ -11,6 +11,7 @@ import useTranslation from 'next-translate/useTranslation'
 import { ThemeProvider } from '../containers/ThemeContext';
 import { ColorProvider } from '../containers/ColorsContext';
 import Loading from '../components/loading/Loading';
+import Head from 'next/head';
 function MyApp({ Component, pageProps, router }: AppProps) {
   const { t, lang } = useTranslation('common')
   const [loading, setLoading] = useState<boolean>(true)
@@ -24,6 +25,22 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   }, [])
   return <ThemeProvider>
     <ColorProvider>
+      <Head>
+        <title>Profile NamBv</title>
+        <meta name="description" content="This is my profile" />
+        <meta name="og:" content="This is my profile" />
+        <link rel="icon" href="/photo3.jpg" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter"
+          rel="stylesheet"
+        />
+        <meta property="image" content="/photo3.jpg" />
+        <meta property="og:locale" content="vn" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Profile Nambv" />
+        <meta property="og:image" content="/photo3.jpg" />
+        <meta content="image/*" property="og:image:type" />
+      </Head>
       {
         loading ?
           <Loading /> : <div className=' bg-app dark:bg-neutral-800 transition-all'>
