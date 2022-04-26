@@ -14,8 +14,7 @@ const routes = [
 ]
 const Home: NextPage = () => {
   const router = useRouter();
-  const { t } = useTranslation('home')
-
+  const { t, lang } = useTranslation('common')
   const print = (pdf: string) => {
     var iframe: HTMLIFrameElement = document.createElement('iframe');
     // Hide the IFrame.  
