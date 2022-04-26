@@ -66,7 +66,7 @@ const Skills = (props: Props) => {
             {/* <img className="w-full" src={IOK} alt="Sunset in the mountains" /> */}
             <div className='w-full h-[500px] overflow-y-auto  grid  gap-3 lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-2 smx:grid-cols-1 scrollbar'>
                 {
-                    data.map(item => <div className="border mb-5 dark:border-dark">
+                    data.map((item, index) => <div key={index} className="border mb-5 dark:border-dark">
                         <img className='w-[calc(100%_-_20px)] h-[calc(100%_-_20px)] p-2 !object-contain' src={item.image} alt="" />
                     </div>)
                 }

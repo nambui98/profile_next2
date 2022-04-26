@@ -76,7 +76,7 @@ const Home: NextPage = () => {
       {/* <img className="w-full" src={IOK} alt="Sunset in the mountains" /> */}
       <div className='w-full h-[500px] overflow-y-auto flex justify-between flex-wrap scrollbar'>
         {
-          data.map(item => <a href={item.link} title={item.title} target="_blank" rel="noreferrer" className="border lg:w-[calc(50%_-_10px)] md:w-full mb-5 dark:border-dark">
+          data.map((item, index) => <a key={index} href={item.link} title={item.title} target="_blank" rel="noreferrer" className="border lg:w-[calc(50%_-_10px)] md:w-full mb-5 dark:border-dark">
             <img className='w-[calc(100%_-_20px)] h-[calc(100%_-_20px)]' src={item.image} alt="" />
           </a>)
         }

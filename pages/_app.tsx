@@ -56,7 +56,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
 
                       <Link href="/works"><a><li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5 px-9 !justify-start"><i className='bx bxs-briefcase mr-3 text-xl' ></i>{t("work")}</li></a></Link>
                       <Link href="/skills"><li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5  px-9 !justify-start"><i className='bx bxs-archive mr-3 text-xl' ></i>{t("skill")} </li></Link>
-                      <a href="https://web3-blog.netlify.app/" target="_blank"><li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5  px-9 !justify-start"><i className='bx bxl-blogger mr-3 text-xl' ></i>{t("blog")}</li></a>
+                      <a href="https://web3-blog.netlify.app/" target="_blank" rel="noreferrer"><li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5  px-9 !justify-start"><i className='bx bxl-blogger mr-3 text-xl' ></i>{t("blog")}</li></a>
                       <Link href="/contact"><li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5  px-9 !justify-start"><i className='bx bxs-contact mr-3 text-xl' ></i>{t("contact")} </li></Link>
                     </ul>
                   </div>

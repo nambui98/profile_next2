@@ -33,6 +33,7 @@ export default function Setting() {
                     {
                         Object.keys(Color).map(function (key, index) {
                             return <button
+                                key={index}
                                 onClick={() => setColor(Color[key])}
                                 className={`w-[40px] h-[40px] rounded-xl settingcolor color${index + 1} ${color === Color[key] ? "active" : ""}`}></button>
                         })
