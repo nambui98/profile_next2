@@ -40,12 +40,12 @@ function MyApp({ Component, pageProps, router }: AppProps) {
           <h1 className="text-black dark:text-white font-extrabold tracking-widest text-3xl mt-5">Nam Bùi</h1>
           <h1 className="text-gray-400 dark:text-white font-extrabold tracking-max text-xl">FRONT END DEV</h1>
           <ul>
-            <Link href="/"><a><li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5"><i className='bx bxs-home-alt-2 mr-3 text-xl' ></i><T phrase="home" /></li> </a></Link>
+            <Link href="/"><a><li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5  px-9 !justify-start"><i className='bx bxs-home-alt-2 mr-3 text-xl' ></i><T phrase="home" /></li> </a></Link>
 
             <Link href="/work"><a><li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5 px-9 !justify-start"><i className='bx bxs-briefcase mr-3 text-xl' ></i><T phrase="work" /></li></a></Link>
-            <Link href="/skills"><li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5"><i className='bx bxs-archive' ></i><T phrase="skill" /> </li></Link>
-            <Link href="https://web3-blog.netlify.app/"><li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5 justify-start"><i className='bx bxl-blogger mr-3 text-xl' ></i><T phrase="blog" /> </li></Link>
-            <Link href="/contact"><li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5 !justify-start"><i className='bx bxs-contact mr-3 text-xl' ></i><T phrase="contact" /> </li></Link>
+            <Link href="/skills"><li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5  px-9 !justify-start"><i className='bx bxs-archive mr-3' ></i><T phrase="skill" /> </li></Link>
+            <Link href="https://web3-blog.netlify.app/"><li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5  px-9 !justify-start"><i className='bx bxl-blogger mr-3 text-xl' ></i><T phrase="blog" /> </li></Link>
+            <Link href="/contact"><li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5  px-9 !justify-start"><i className='bx bxs-contact mr-3 text-xl' ></i><T phrase="contact" /> </li></Link>
           </ul>
         </div>
 
