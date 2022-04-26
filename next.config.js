@@ -2,5 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
 }
-
-module.exports = nextConfig
+const nextTranslate = require('next-translate')
+module.exports = nextTranslate({
+  webpack: (nextConfig, { isServer, webpack }) => {
+    return nextConfig;
+  }
+})

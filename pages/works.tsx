@@ -3,6 +3,8 @@ import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
+import { Suspense } from 'react'
+import Loading from '../components/loading/Loading'
 const routes = [
   { path: '*', name: 'Home' },
   { path: '/', name: 'Home' },
@@ -10,12 +12,53 @@ const routes = [
   { path: '/work', name: 'Work' },
   { path: '/skills', name: 'Skills' },
 ]
+type item = {
+  title: string,
+  link: string,
+  image: string,
+}
 const Home: NextPage = () => {
   const router = useRouter();
   console.log(router.asPath);
-
+  const data: item[] = [
+    {
+      title: "Iok chương trình thi topik online",
+      link: "https://iok.vn",
+      image: "/assets/img/iok.png"
+    },
+    {
+      title: "Dự án ERP",
+      link: "http://172.105.120.33:6004/",
+      image: "/assets/img/bavinn.png"
+    },
+    {
+      title: "Làm phần CMS cho webside đặt vé máy bay",
+      link: "https://www.vietravelairlines.com/vn/vi",
+      image: "/assets/img/vtva.png"
+    },
+    {
+      title: "FE NFT design trên figma",
+      link: "https://nft-flame-phi.vercel.app/",
+      image: "/assets/img/nft.png"
+    },
+    {
+      title: "Làm thử đồng coin",
+      link: "https://namcoin.vercel.app/",
+      image: "/assets/img/coin2.png"
+    },
+    {
+      title: "Trang portfolio cá nhân",
+      link: "https://namportfolio.netlify.app/",
+      image: "/assets/img/portpolio.png"
+    },
+    {
+      title: "Tran paralax design trên figma",
+      link: "https://parallaxnambv.netlify.app/",
+      image: "/assets/img/paralax.png"
+    },
+  ]
   return (
-    <div className={styles.container}>
+    <div className=" scroll-mb-1 p-6 mx-4">
       <Head>
         <title>Profile NamBv</title>
         <meta name="description" content="This is my profile" />
@@ -27,67 +70,15 @@ const Home: NextPage = () => {
       </Head>
 
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-        <div className={styles.heroImage}>
-          <Image
-            src="/large-image.jpg"
-            alt="Large Image"
-            width={3048}
-            height={2024}
-          />
-        </div>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.tsx</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      <p className='text-black dark:text-white text-xl text-left font-bold mb-2'>Works</p>
+      {/* <img className="w-full" src={IOK} alt="Sunset in the mountains" /> */}
+      <div className='w-full h-[500px] overflow-y-auto flex justify-between flex-wrap scrollbar'>
+        {
+          data.map(item => <a href={item.link} title={item.title} target="_blank" rel="noreferrer" className="border lg:w-[calc(50%_-_10px)] md:w-full mb-5 dark:border-dark">
+            <img className='w-[calc(100%_-_20px)] h-[calc(100%_-_20px)]' src={item.image} alt="" />
+          </a>)
+        }
+      </div>
     </div>
   )
 }

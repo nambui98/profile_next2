@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
-import { T } from 'react-polyglot-hooks'
+import useTranslation from 'next-translate/useTranslation'
 const colors = require('tailwindcss/colors')
 const routes = [
   { path: '*', name: 'Home' },
@@ -14,6 +14,8 @@ const routes = [
 ]
 const Home: NextPage = () => {
   const router = useRouter();
+  const { t } = useTranslation('home')
+
   const print = (pdf: string) => {
     var iframe: HTMLIFrameElement = document.createElement('iframe');
     // Hide the IFrame.  
@@ -26,12 +28,12 @@ const Home: NextPage = () => {
     iframe?.contentWindow?.print();
   }
   return (
-    <>
+    <div className='relative w-full h-full scroll-mb-1 p-6 mx-4 flex justify-center items-center flex-col'>
       <Head>
         <title>Profile NamBv</title>
         <meta name="description" content="This is my profile" />
         <meta name="og:" content="This is my profile" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/photo3.jpg" />
         <link
           href="https://fonts.googleapis.com/css2?family=Inter"
           rel="stylesheet"
@@ -45,27 +47,26 @@ const Home: NextPage = () => {
       </Head>
 
 
-      <div className="relative rounded-3xl md:w-6/12 sm:w-10/12 smx:w-10/12 p-6 h-full mx-4 bg-app dark:bg-neutral-800 shadow-3xl dark:shadow-3xl-dark flex justify-center items-center flex-col">
-        <h1 className="text-black dark:text-white text-3xl text-center font-extrabold">Bùi Văn Nam</h1>
-        <p className="text-gray-400 dark:text-white tracking-widest font-bold">Hưng Yên</p>
-        <div className="flex mt-4">
-          <a href='https://www.facebook.com/songoku.bui/' target="_blank" rel="noreferrer" className="btn-shadow dark:btn-shadow-dark fb rounded-full text-center w-14 h-14"><i className='bx bxl-facebook text-3xl' style={{ color: colors.coolGray[400] }}></i></a>
-          <a href='https://www.instagram.com/nambui27/' target="_blank" rel="noreferrer" className="btn-shadow dark:btn-shadow-dark itg rounded-full text-center w-14 h-14 mx-5"><i className='bx bxl-instagram-alt text-3xl' style={{ color: colors.coolGray[400] }}></i></a>
-          <a href='mailto:bvnam98@gmail.com' target="_blank" rel="noreferrer" className="btn-shadow dark:btn-shadow-dark gg rounded-full text-center w-14 h-14"><i className='bx bxl-google text-3xl' style={{ color: colors.coolGray[400] }}></i></a>
-        </div>
-        <div className="absolute bottom-10 2xl:right-20 2xl:left-20 md:right-10 md:left-10 flex items-center smx:flex-col smx:items-start justify-between">
-          <span className="flex items-center ">
-            <a
-              href='/cv.pdf'
-              className="btn-shadow dark:btn-shadow-dark rounded-full text-center w-12 h-12"
-            ><i className='bx bxl-facebook text-xl' style={{ color: "var(--color)" }}></i>
 
-            </a>
-            <span className="ml-2 dark:text-white"><T phrase='downloadcv' /></span></span>
-          <span className="flex flex-row-reverse smx:flex-row smx:mt-2 items-center" ><button onClick={() => print('cv.pdf')} className="btn-shadow dark:btn-shadow-dark rounded-full text-center w-12 h-12"><i className='bx bxs-printer text-xl' style={{ color: "var(--color)" }}></i></button><span className="mr-2 smx:ml-2 dark:text-white"><T phrase='printmyresum' /></span></span>
-        </div>
+      <h1 className="text-black dark:text-white text-3xl text-center font-extrabold">Bùi Văn Nam</h1>
+      <p className="text-gray-400 dark:text-white tracking-widest font-bold">Hưng Yên</p>
+      <div className="flex mt-4">
+        <a href='https://www.facebook.com/songoku.bui/' target="_blank" rel="noreferrer" className="btn-shadow dark:btn-shadow-dark fb rounded-full text-center w-14 h-14"><i className='bx bxl-facebook text-3xl' style={{ color: colors.coolGray[400] }}></i></a>
+        <a href='https://www.instagram.com/nambui27/' target="_blank" rel="noreferrer" className="btn-shadow dark:btn-shadow-dark itg rounded-full text-center w-14 h-14 mx-5"><i className='bx bxl-instagram-alt text-3xl' style={{ color: colors.coolGray[400] }}></i></a>
+        <a href='mailto:bvnam98@gmail.com' target="_blank" rel="noreferrer" className="btn-shadow dark:btn-shadow-dark gg rounded-full text-center w-14 h-14"><i className='bx bxl-google text-3xl' style={{ color: colors.coolGray[400] }}></i></a>
       </div>
-    </>
+      <div className="absolute bottom-10 2xl:right-20 2xl:left-20 md:right-10 md:left-10 flex items-center smx:flex-col smx:items-start justify-between">
+        <span className="flex items-center ">
+          <a
+            href='/cv.pdf'
+            className="btn-shadow dark:btn-shadow-dark rounded-full text-center w-12 h-12"
+          ><i className='bx bxl-facebook text-xl' style={{ color: "var(--color)" }}></i>
+
+          </a>
+          <span className="ml-2 dark:text-white">{t('downloadcv')}</span></span>
+        <span className="flex flex-row-reverse smx:flex-row smx:mt-2 items-center" ><button onClick={() => print('cv.pdf')} className="btn-shadow dark:btn-shadow-dark rounded-full text-center w-12 h-12"><i className='bx bxs-printer text-xl' style={{ color: "var(--color)" }}></i></button><span className="mr-2 smx:ml-2 dark:text-white">{t('printmyresum')}</span></span>
+      </div>
+    </div>
   )
 }
 
