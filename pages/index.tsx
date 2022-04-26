@@ -27,7 +27,7 @@ const Home: NextPage = () => {
     iframe?.contentWindow?.print();
   }
   return (
-    <div className='relative w-full h-full scroll-mb-1 p-6 mx-4 flex justify-center items-center flex-col'>
+    <div className=' rounded-3xl bg-app dark:bg-neutral-800 shadow-3xl dark:shadow-3xl-dark relative w-full h-full scroll-mb-1 p-6 flex justify-center items-center flex-col'>
       <Head>
         <title>Profile NamBv</title>
         <meta name="description" content="This is my profile" />

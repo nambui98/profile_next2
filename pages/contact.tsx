@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function contact() {
     return (
-        <div className="p-6 mx-4 relative">
+        <div className=" rounded-3xl bg-app dark:bg-neutral-800 shadow-3xl dark:shadow-3xl-dark relative w-full h-full scroll-mb-1 p-6 relative " >
             <div className="border w-full h-[160px] mb-5 dark:border-dark">
                 <div className='border-insite dark:border-dark-insite w-[calc(100%_-_15px)] h-[calc(100%_-_15px)] p-3'>
 

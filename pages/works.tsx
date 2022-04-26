@@ -60,7 +60,7 @@ const Home: NextPage = () => {
     },
   ]
   return (
-    <div className=" scroll-mb-1 p-6 mx-4">
+    <div className=" rounded-3xl bg-app dark:bg-neutral-800 shadow-3xl dark:shadow-3xl-dark relative w-full h-full p-6">
       <Head>
         <title>Profile NamBv</title>
         <meta name="description" content="This is my profile" />

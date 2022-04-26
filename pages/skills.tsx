@@ -61,7 +61,7 @@ const Skills = (props: Props) => {
 
     ]
     return (
-        <div className="p-6 mx-4">
+        <div className=" rounded-3xl bg-app dark:bg-neutral-800 shadow-3xl dark:shadow-3xl-dark relative w-full h-full scroll-mb-1 p-6">
             <p className='text-black dark:text-white text-xl text-left font-bold mb-2'>Skills</p>
             {/* <img className="w-full" src={IOK} alt="Sunset in the mountains" /> */}
             <div className='w-full h-[500px] overflow-y-auto  grid  gap-3 lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-2 smx:grid-cols-1 scrollbar'>
