@@ -5,6 +5,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import { Suspense } from 'react'
 import Loading from '../components/loading/Loading'
+import useTranslation from 'next-translate/useTranslation'
 const routes = [
   { path: '*', name: 'Home' },
   { path: '/', name: 'Home' },
@@ -20,6 +21,7 @@ type item = {
 const Home: NextPage = () => {
   const router = useRouter();
   console.log(router.asPath);
+  const { t } = useTranslation('common')
   const data: item[] = [
     {
       title: "Iok chương trình thi topik online",
@@ -70,7 +72,7 @@ const Home: NextPage = () => {
       </Head>
 
 
-      <p className='text-black dark:text-white text-xl text-left font-bold mb-2'>Works</p>
+      <p className='text-black dark:text-white text-xl text-left font-bold mb-2'>{t("works")}</p>
       {/* <img className="w-full" src={IOK} alt="Sunset in the mountains" /> */}
       <div className='w-full h-[500px] overflow-y-auto flex justify-between flex-wrap scrollbar'>
         {

@@ -5,7 +5,6 @@ import { ThemeContext } from '../ThemeContext';
 // import vietnamimg from '/assets/img/vietnam.png'
 // import usaimg from '/assets/img/united-states.png'
 import setLanguage from 'next-translate/setLanguage'
-import { useLanguge } from '../LanguageContext';
 import { Color, useColor } from '../ColorsContext';
 import useTranslation from 'next-translate/useTranslation';
 export default function Setting() {
@@ -17,20 +16,13 @@ export default function Setting() {
     return (<div className={`relative transform duration-500 ${active ? "translate-x-0" : "translate-x-40"}`}>
         <button className="btn-shadow dark:btn-shadow-dark-50 bg-app dark:bg-neutral-800 setting -left-[12rem] top-4 rounded-full text-center w-10 h-10" onClick={() => setActive(!active)}>
             <i className='bx bxs-cog animate-spin duration-1000 text-3xl' style={{ animationDuration: "2s" }}></i>
-            {/* <FaRegSun class="animate-spin duration-1000 text-3xl" style={{ animationDuration: "2s" }} fill={colors.coolGray[400]} /> */}
         </button>
         <div className={`absolute w-[145px] top-0 right-0 rounded-3xl flex justify-between flex-wrap p-3 shadow-3xl bg-app dark:bg-neutral-800 dark:shadow-3xl-dark`} >
             <button className="mr-2 btn-shadow dark:btn-shadow-dark-50 btn-setting rounded-full text-center w-12 h-12" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
                 {theme === 'dark' ? (
                     <i className='bx bxs-sun text-gray-500  text-2xl cursor-pointer dark'></i>
-                    // <FaSun
-                    //     className="text-gray-500 dark:text-gray-400 text-2xl cursor-pointer dark"
-                    // />
                 ) : (
                     <i className='bx bxs-moon text-gray-500  text-2xl cursor-pointer light' ></i>
-                    // <FaMoon
-                    //     className="text-gray-500 dark:text-gray-400 text-2xl cursor-pointer light"
-                    // />
                 )}
             </button>
             <button className="top-6 right-6 border w-12 h-12 dark:border-dark rounded-3xl" onClick={async () => await setLanguage(lang == "vn" ? 'en' : "vn")}>
