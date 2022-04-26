@@ -36,11 +36,11 @@ const Home: NextPage = () => {
           href="https://fonts.googleapis.com/css2?family=Inter"
           rel="stylesheet"
         />
-        <meta property="image" content="/logo2.jpg" />
+        <meta property="image" content="/photo3.jpg" />
         <meta property="og:locale" content="vn" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Profile Nambv" />
-        <meta property="og:image" content="/logo2.jpg" />
+        <meta property="og:image" content="/photo3.jpg" />
         <meta content="image/*" property="og:image:type" />
       </Head>
 

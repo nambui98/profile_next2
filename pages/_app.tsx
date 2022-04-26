@@ -25,15 +25,15 @@ function MyApp({ Component, pageProps, router }: AppProps) {
           <div className="wrap-avatar dark:wrap-avatar-dark">
             <div className="avatar">
               {/* <div className='relative'> */}
-
-              <Image
+              <img src="/Logo.jpg" alt="" />
+              {/* <Image
                 src="/Logo.jpg"
                 alt="Large Image"
                 width={200}
                 className="static"
                 objectFit="cover"
                 height={200}
-              />
+              /> */}
               {/* </div> */}
             </div>
           </div>
