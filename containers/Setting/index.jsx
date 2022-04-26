@@ -15,7 +15,7 @@ export default function Setting() {
 
     return (<div className={`relative transform duration-500 ${active ? "translate-x-0" : "translate-x-40"}`}>
         <button className="btn-shadow dark:btn-shadow-dark-50 bg-app dark:bg-neutral-800 setting -left-[12rem] top-4 rounded-full text-center w-10 h-10" onClick={() => setActive(!active)}>
-            <i className='bx bxs-cog animate-spin duration-1000 text-3xl' style={{ animationDuration: "2s" }}></i>
+            <i className={`bx bxs-cog animate-spin duration-1000 text-3xl text-gray-500`} style={{ animationDuration: "2s" }}></i>
         </button>
         <div className={`absolute w-[145px] top-0 right-0 rounded-3xl flex justify-between flex-wrap p-3 shadow-3xl bg-app dark:bg-neutral-800 dark:shadow-3xl-dark`} >
             <button className="mr-2 btn-shadow dark:btn-shadow-dark-50 btn-setting rounded-full text-center w-12 h-12" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
@@ -25,7 +25,7 @@ export default function Setting() {
                     <i className='bx bxs-moon text-gray-500  text-2xl cursor-pointer light' ></i>
                 )}
             </button>
-            <button className="top-6 right-6 border w-12 h-12 dark:border-dark rounded-3xl" onClick={async () => await setLanguage(lang == "vn" ? 'en' : "vn")}>
+            <button className="top-6 right-6 border w-12 h-12 dark:border-dark !rounded-3xl" onClick={async () => await setLanguage(lang == "vn" ? 'en' : "vn")}>
                 <img className='w-[calc(100%_-_10px)] h-[calc(100%_-_10px)]' src={lang === "vn" ? "/assets/img/vietnam.png" : "/assets/img/united-states.png"} alt="" />
             </button>
             <div className="border w-full h-[160px] mt-3 dark:border-dark">
@@ -47,6 +47,6 @@ export default function Setting() {
                 </div>
             </div>
         </div>
-    </div>
+    </div >
     )
 }

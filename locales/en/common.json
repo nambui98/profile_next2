@@ -6,5 +6,9 @@
     "contact": "Contact",
     "downloadcv": "Download my CV",
     "printmyresum": "Print my CV",
-    "works": "Works"
+    "works": "Works",
+    "nativeland":"Native land",
+    "phonenumber":"Phone",
+    "mail":"Mail",
+    "address":"Address"
 }

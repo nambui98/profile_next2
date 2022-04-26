@@ -1,15 +1,17 @@
+import useTranslation from 'next-translate/useTranslation';
 import React from 'react';
 
 export default function contact() {
+    const { t } = useTranslation('common')
     return (
         <div className=" rounded-3xl bg-app dark:bg-neutral-800 shadow-3xl dark:shadow-3xl-dark relative w-full h-full scroll-mb-1 p-6 relative " >
             <div className="border w-full h-[160px] mb-5 dark:border-dark">
                 <div className='border-insite dark:border-dark-insite w-[calc(100%_-_15px)] h-[calc(100%_-_15px)] p-3'>
 
-                    <p className="text-black dark:text-white text-xl text-left font-bold">Địa chỉ: <span className='font-normal'>Hà Nội</span> </p>
-                    <p className="text-black dark:text-white text-xl text-left font-bold">Quê quán: <span className='font-normal'>Hưng Yên</span> </p>
-                    <p className="text-black dark:text-white text-xl text-left font-bold">Số điện thoại: <span className='font-normal'>0355817589</span> </p>
-                    <p className="text-black dark:text-white text-xl text-left font-bold">Mail: <span className='font-normal'>bvnam98@gmail.com</span> </p>
+                    <p className="text-black dark:text-white text-xl text-left font-bold smx:text-lg">{t("address")}: <span className='font-normal'>Hà Nội</span> </p>
+                    <p className="text-black dark:text-white text-xl text-left font-bold smx:text-lg">{t("nativeland")}: <span className='font-normal'>Hưng Yên</span> </p>
+                    <p className="text-black dark:text-white text-xl text-left font-bold smx:text-lg">{t("phonenumber")}: <span className='font-normal'>0355817589</span> </p>
+                    <p className="text-black dark:text-white text-xl text-left font-bold smx:text-lg">{t("mail")}: <span className='font-normal'>bvnam98@gmail.com</span> </p>
                 </div>
             </div>
             <div className="absolute top-[3.5rem] right-[4rem] border lg:w-[100px] h-[100px] lg:flex md:hidden mb-5 smx:hidden dark:border-dark">

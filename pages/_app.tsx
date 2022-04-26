@@ -4,6 +4,8 @@ import 'boxicons/css/boxicons.min.css'
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { Menu } from '../components/menu';
+
 import { useRouter } from 'next/router';
 import Setting from '../containers/Setting'
 import Bubbles from '../components/bubbles/Bubbles'
@@ -51,6 +53,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
               </div>
               <Bubbles />
               <div className="App relative">
+                <Menu />
                 <div className="flex h-screen w-screen items-center justify-center relative">
                   <div className="flex w-full items-start justify-center" style={{ height: "600px" }}>
                     <div className=" md:w-6/12  sm:w-10/12 smx:w-10/12 h-full   ">
