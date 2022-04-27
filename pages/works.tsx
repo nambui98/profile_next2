@@ -63,12 +63,6 @@ const Home: NextPage = () => {
     <div className=" rounded-3xl bg-app dark:bg-neutral-800 shadow-3xl dark:shadow-3xl-dark relative w-full h-full p-6">
       <Head>
         <title>Profile NamBv</title>
-        <meta name="description" content="This is my profile" />
-        <link rel="icon" href="/favicon.ico" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter"
-          rel="stylesheet"
-        />
       </Head>
 
 
