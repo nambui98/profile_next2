@@ -26,11 +26,16 @@ const Home: NextPage = () => {
   const data: item[] = [
     {
       title: "Befitter app",
-      link: "http://cdn.befitter.io/downloadapp/ ",
+      link: "https://play.google.com/store/apps/details?id=io.befitter.app&hl=en",
       image: "assets/img/befitter_app.jpg",
       type: 'mobile'
     },
-
+    {
+      title: "Music app",
+      link: "https://play.google.com/store/apps/details?id=com.tsp.sound2relax&hl=en",
+      image: "assets/img/music_app.jpg",
+      type: 'mobile'
+    },
     {
       title: "Befitter website",
       link: "https://befitter.io/",
