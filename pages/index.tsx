@@ -52,7 +52,7 @@ const Home: NextPage = () => {
       <h1 className="text-black dark:text-white text-3xl text-center font-extrabold">Bùi Văn Nam</h1>
       <p className="text-gray-400 dark:text-white tracking-widest font-bold">Hưng Yên</p>
       <div className="flex mt-4">
-        <a href='https://www.facebook.com/songoku.bui/' target="_blank" rel="noreferrer" className="btn-shadow dark:btn-shadow-dark fb rounded-full text-center w-14 h-14  text-[#9ca3af] group "><i className={`bx bxl-facebook text-3xl group-hover:text-[${color}]`}></i></a>
+        <a href='https://www.facebook.com/namyeuyen.hihi/' target="_blank" rel="noreferrer" className="btn-shadow dark:btn-shadow-dark fb rounded-full text-center w-14 h-14  text-[#9ca3af] group "><i className={`bx bxl-facebook text-3xl group-hover:text-[${color}]`}></i></a>
         <a href='https://www.instagram.com/nambui27/' target="_blank" rel="noreferrer" className="btn-shadow dark:btn-shadow-dark itg rounded-full text-center w-14 h-14 mx-5 text-[#9ca3af] group"><i className={`bx bxl-instagram-alt text-3xl group-hover:text-[${color}]`}></i></a>
         <a href='mailto:bvnam98@gmail.com' target="_blank" rel="noreferrer" className="btn-shadow dark:btn-shadow-dark gg rounded-full text-center w-14 h-14 text-[#9ca3af] group"><i className={`bx bxl-google text-3xl group-hover:text-[${color}]`}></i></a>
       </div>

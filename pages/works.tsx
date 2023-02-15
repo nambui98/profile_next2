@@ -17,12 +17,25 @@ type item = {
   title: string,
   link: string,
   image: string,
+  type?: string
 }
 const Home: NextPage = () => {
   const router = useRouter();
   console.log(router.asPath);
   const { t } = useTranslation('common')
   const data: item[] = [
+    {
+      title: "Befitter app",
+      link: "http://cdn.befitter.io/downloadapp/ ",
+      image: "assets/img/befitter_app.jpg",
+      type: 'mobile'
+    },
+
+    {
+      title: "Befitter website",
+      link: "https://befitter.io/",
+      image: "assets/img/befitter.png"
+    },
     {
       title: "Iok chương trình thi topik online",
       link: "https://iok.vn",
@@ -68,10 +81,10 @@ const Home: NextPage = () => {
 
       <p className='text-black dark:text-white text-xl text-left font-bold mb-2'>{t("works")}</p>
       {/* <img className="w-full" src={IOK} alt="Sunset in the mountains" /> */}
-      <div className='w-full h-[500px] overflow-y-auto flex justify-between flex-wrap scrollbar'>
+      <div className='w-full h-[calc(100%_-_40px)] overflow-y-auto flex justify-between flex-wrap scrollbar'>
         {
-          data.map((item, index) => <a key={index} href={item.link} title={item.title} target="_blank" rel="noreferrer" className="border lg:w-[calc(50%_-_10px)]  md:w-full mb-5 dark:border-dark">
-            <img className='w-[calc(100%_-_20px)] h-[calc(100%_-_20px)]' src={item.image} alt="" />
+          data.map((item, index) => <a key={index} href={item.link} title={item.title} target="_blank" rel="noreferrer" className="border lg:w-[calc(50%_-_10px)] w-full mb-5 dark:border-dark h-[240px]">
+            <img className={`w-[calc(100%_-_20px)] h-[calc(100%_-_20px)] ${item.type === "mobile" ? '!object-contain' : ''}`} src={item.image} alt="" />
           </a>)
         }
       </div>

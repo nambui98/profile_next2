@@ -18,7 +18,7 @@ export default function Contact() {
                 <img className='w-[calc(100%_-_15px)] h-[calc(100%_-_15px)] !object-contain' src="/assets/img/nhan.png" alt="" />
             </div>
             <div className="border w-full h-[350px] mt-5 mb-5 dark:border-dark">
-                <iframe title='address' className='border-insite dark:border-dark-insite' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.9953604658476!2d105.85208121482006!3d20.992823094380373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac12ee34ca35%3A0xa48f99dde993dc90!2zTmcuIEfhu5FjIMSQ4buBLCBIb8OgbmcgVsSDbiBUaOG7pSwgSG_DoG5nIE1haSwgSMOgIE7hu5lpLCBWaWV0bmFt!5e0!3m2!1sen!2s!4v1649835609336!5m2!1sen!2s" width="100%" height="100%" style={{ border: 0, width: "calc( 100% - 20px)", height: "calc( 100% - 20px)" }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                <iframe title='address' className='border-insite dark:border-dark-insite' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0771457509413!2d105.78920931533224!3d21.02959899312467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab4f25a5e0a9%3A0x26fe96003b912e52!2zQ8O0bmcgVmnDqm4gQ-G6p3UgR2nhuqV5!5e0!3m2!1sen!2s!4v1676433640609!5m2!1sen!2s" width="100%" height="100%" style={{ border: 0, width: "calc( 100% - 20px)", height: "calc( 100% - 20px)" }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     )
