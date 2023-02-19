@@ -35,12 +35,13 @@ export const Menu = () => {
       initial={false}
       animate={isOpen ? "open" : "closed"}
       custom={height}
-      className="menu dark:menu-dark sm:block md:hidden"
+      className={`menu dark:menu-dark sm:block md:hidden ${!isOpen ?? "pointer-events-none"}`}
       ref={containerRef}
     >
-      <motion.div className="background" variants={sidebar} />
-      <Navigation toggle={() => toggleOpen()} />
+      <motion.div className={`background ${!isOpen ? "pointer-events-none" : ""}`} variants={sidebar} />
+      <Navigation toggle={() => toggleOpen()} isOpen={isOpen} />
       <MenuToggle toggle={() => toggleOpen()} />
     </motion.nav>
   );
+
 };

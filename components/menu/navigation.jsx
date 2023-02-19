@@ -11,8 +11,8 @@ const variants = {
   }
 };
 
-export const Navigation = ({ toggle }) => {
-  return <motion.ul className="" variants={variants}>
+export const Navigation = ({ toggle, isOpen }) => {
+  return <motion.ul className={`${!isOpen ? "pointer-events-none" : ""}`} variants={variants}>
     {itemIds.map((item, index) => (
       <MenuItem i={index} key={index} item={item} toggle={toggle} />
     ))}
