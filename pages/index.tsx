@@ -61,7 +61,7 @@ const Home: NextPage = () => {
           <a
             href='/cv.pdf'
             className="btn-shadow dark:btn-shadow-dark rounded-full text-center w-12 h-12"
-          ><i className='bx bxl-facebook text-2xl' style={{ color: "var(--color)" }}></i>
+          ><i className='bx bxs-download text-2xl' style={{ color: "var(--color)" }}></i>
 
           </a>
           <span className="ml-2 dark:text-white">{t('downloadcv')}</span></span>
