@@ -25,6 +25,22 @@ const Home: NextPage = () => {
   const { t } = useTranslation('common')
   const data: item[] = [
     {
+      title: "DeODD",
+      link: "https://deodd.io",
+      image: "assets/img/deodd.png",
+    },
+    {
+      title: "ChipTracker",
+      link: "https://chiptracker.net",
+      image: "assets/img/chiptracker.png",
+    },
+    {
+      title: "Dstax",
+      link: "",
+      image: "assets/img/dstax.png",
+    },
+
+    {
       title: "Befitter app",
       link: "https://play.google.com/store/apps/details?id=io.befitter.app&hl=en",
       image: "assets/img/befitter_app.jpg",
