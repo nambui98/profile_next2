@@ -9,8 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                echo aaaaaaaaaaaaaaa
-                // git 'https://github.com/nambui98/profile_next.git'
+                git 'https://github.com/nambui98/profile_next.git'
             }
         }
         stage('Build') {
