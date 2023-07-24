@@ -10,14 +10,15 @@ pipeline {
         stage('Checkout') {
             steps {
                 git 'https://github.com/nambui98/profile_next.git'
+                echo "aaaaaaaa"
             }
         }
-        stage('Build') {
-            agent { node {label 'master'}}
-            steps {
-                sh 'docker build -t $DOCKER_IMAGE .'
-            }
-        }
+        // stage('Build') {
+        //     agent { node {label 'master'}}
+        //     steps {
+        //         sh 'docker build -t $DOCKER_IMAGE .'
+        //     }
+        // }
 
         // stage('Push to Docker Registry') {
         //     steps {
