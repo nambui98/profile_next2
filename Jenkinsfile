@@ -82,7 +82,7 @@ pipeline {
         stage('build') {
             agent any
             environment {
-                DOCKER_TAG="${BRANCH_NAME.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
+                DOCKER_TAG="aaaaaaaaaa"
             }
             steps {
                 sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} . "
