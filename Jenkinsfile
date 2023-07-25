@@ -81,10 +81,13 @@ pipeline {
 
         stage('build') {
             agent {
+                node{
                 label 'any' // Replace 'docker' with the label of your docker-capable agent
                 // Or use 'any' if you want to run on any available agent
                 // label 'any'
-            }
+ 
+                }
+           }
             environment {
                 DOCKER_TAG="${BRANCH_NAME.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
             }
