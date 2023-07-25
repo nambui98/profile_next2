@@ -81,7 +81,7 @@ pipeline {
 
         stage('build') {
             agent {
-                label 'docker' // Replace 'docker' with the label of your docker-capable agent
+                label 'any' // Replace 'docker' with the label of your docker-capable agent
                 // Or use 'any' if you want to run on any available agent
                 // label 'any'
             }
