@@ -80,31 +80,26 @@ pipeline {
     stages {
 
         stage('build') {
-            agent any // You can use 'any' or specify a specific agent here if needed
-            // agent { node {label 'master'}}
+            agent {
+                label 'docker' // Replace 'docker' with the label of your docker-capable agent
+                // Or use 'any' if you want to run on any available agent
+                // label 'any'
+            }
             environment {
                 DOCKER_TAG="${BRANCH_NAME.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
             }
             steps {
-                // Use 'node' here to specify where these steps should be executed
-                node {
-                    label 'master'
-                    // Use 'docker' label if you have a docker-capable agent or use 'any' to run on any available agent
-                    // agent {
-                    //    label 'docker'
-                    // }
-                    sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} . "
-                    sh "docker tag ${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest"
-                    sh "docker image ls | grep ${DOCKER_IMAGE}"
-                    withCredentials([usernamePassword(credentialsId: 'docker-hub', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
-                        sh 'echo $DOCKER_PASSWORD | docker login --username $DOCKER_USERNAME --password-stdin'
-                        sh "docker push ${DOCKER_IMAGE}:${DOCKER_TAG}"
-                        sh "docker push ${DOCKER_IMAGE}:latest"
-                    }
-
-                    sh "docker image rm ${DOCKER_IMAGE}:${DOCKER_TAG}"
-                    sh "docker image rm ${DOCKER_IMAGE}:latest"
+                sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} . "
+                sh "docker tag ${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest"
+                sh "docker image ls | grep ${DOCKER_IMAGE}"
+                withCredentials([usernamePassword(credentialsId: 'docker-hub', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
+                    sh 'echo $DOCKER_PASSWORD | docker login --username $DOCKER_USERNAME --password-stdin'
+                    sh "docker push ${DOCKER_IMAGE}:${DOCKER_TAG}"
+                    sh "docker push ${DOCKER_IMAGE}:latest"
                 }
+
+                sh "docker image rm ${DOCKER_IMAGE}:${DOCKER_TAG}"
+                sh "docker image rm ${DOCKER_IMAGE}:latest"
             }
         }
     }
@@ -118,4 +113,5 @@ pipeline {
         }
     }
 }
+
 
