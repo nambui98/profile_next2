@@ -80,7 +80,7 @@ pipeline {
     stages {
 
         stage('build') {
-            agent any // You can use 'any' or specify a specific agent here if needed
+            agent { node {label 'master'}}
             environment {
                 DOCKER_TAG="${BRANCH_NAME.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
             }
