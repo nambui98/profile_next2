@@ -81,13 +81,14 @@ pipeline {
 
         stage('build') {
             agent any // You can use 'any' or specify a specific agent here if needed
+            // agent { node {label 'master'}}
             environment {
                 DOCKER_TAG="${BRANCH_NAME.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
             }
             steps {
                 // Use 'node' here to specify where these steps should be executed
                 node {
-                    agent { node {label 'master'}}
+                    label 'master'
                     // Use 'docker' label if you have a docker-capable agent or use 'any' to run on any available agent
                     // agent {
                     //    label 'docker'
