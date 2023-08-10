@@ -59,13 +59,13 @@ const Home: NextPage = () => {
       <div className="absolute bottom-10 2xl:right-20 2xl:left-20 md:right-10 md:left-10 flex items-center smx:flex-col smx:items-start justify-between">
         <span className="flex items-center ">
           <a
-            href='/cv.pdf'
+            href='/cv2.pdf'
             className="btn-shadow dark:btn-shadow-dark rounded-full text-center w-12 h-12"
           ><i className='bx bxs-download text-2xl' style={{ color: "var(--color)" }}></i>
 
           </a>
           <span className="ml-2 dark:text-white">{t('downloadcv')}</span></span>
-        <span className="flex flex-row-reverse smx:flex-row smx:mt-2 items-center" ><button onClick={() => print('cv.pdf')} className="btn-shadow dark:btn-shadow-dark rounded-full text-center w-12 h-12"><i className='bx bxs-printer text-2xl' style={{ color: "var(--color)" }}></i></button><span className="mr-2 smx:ml-2 dark:text-white">{t('printmyresum')}</span></span>
+        <span className="flex flex-row-reverse smx:flex-row smx:mt-2 items-center" ><button onClick={() => print('cv2.pdf')} className="btn-shadow dark:btn-shadow-dark rounded-full text-center w-12 h-12"><i className='bx bxs-printer text-2xl' style={{ color: "var(--color)" }}></i></button><span className="mr-2 smx:ml-2 dark:text-white">{t('printmyresum')}</span></span>
       </div>
     </div>
   )
