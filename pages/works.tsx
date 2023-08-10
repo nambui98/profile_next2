@@ -27,35 +27,55 @@ const Home: NextPage = () => {
     {
       title: "DeODD",
       link: "https://deodd.io",
-      image: "assets/img/deodd.png",
+      image: "/assets/img/deodd.png",
     },
     {
       title: "ChipTracker",
       link: "https://chiptracker.net",
-      image: "assets/img/chiptracker.png",
+      image: "/assets/img/chiptracker.png",
     },
     {
       title: "Dstax",
-      link: "",
-      image: "assets/img/dstax.png",
+      link: "https://dtax.vercel.app/",
+      image: "/assets/img/dstax.png",
     },
 
     {
       title: "Befitter app",
       link: "https://play.google.com/store/apps/details?id=io.befitter.app&hl=en",
-      image: "assets/img/befitter_app.jpg",
+      image: "/assets/img/befitter_app.jpg",
       type: 'mobile'
     },
     {
       title: "Music app",
       link: "https://play.google.com/store/apps/details?id=com.tsp.sound2relax&hl=en",
-      image: "assets/img/music_app.jpg",
+      image: "/assets/img/music_app.jpg",
       type: 'mobile'
     },
     {
       title: "Befitter website",
       link: "https://befitter.io/",
-      image: "assets/img/befitter.png"
+      image: "/assets/img/befitter.png"
+    },
+    {
+      title: "Nextverse",
+      link: "https://nextverse.io/",
+      image: "/assets/img/nextverse.png",
+    },
+    {
+      title: "Quorumex",
+      link: "https://quorumex-web.vercel.app/",
+      image: "/assets/img/quorumex.png",
+    },
+    {
+      title: "VerseHub bridge",
+      link: "https://bridge.versehub.io/",
+      image: "/assets/img/versehubbridge.png",
+    },
+    {
+      title: "Penpal",
+      link: "https://www.penpalnft.com/",
+      image: "/assets/img/penpal.png",
     },
     {
       title: "Iok chương trình thi topik online",
@@ -103,9 +123,14 @@ const Home: NextPage = () => {
       <p className='text-black dark:text-white text-xl text-left font-bold mb-2'>{t("works")}</p>
       {/* <img className="w-full" src={IOK} alt="Sunset in the mountains" /> */}
       <div className='w-full h-[calc(100%_-_40px)] overflow-y-auto flex justify-between flex-wrap scrollbar'>
+
         {
           data.map((item, index) => <a key={index} href={item.link} title={item.title} target="_blank" rel="noreferrer" className="border lg:w-[calc(50%_-_10px)] w-full mb-5 dark:border-dark h-[240px]">
-            <img className={`w-[calc(100%_-_20px)] h-[calc(100%_-_20px)] ${item.type === "mobile" ? '!object-contain' : ''}`} src={item.image} alt="" />
+            <img
+              loading="lazy"
+              decoding="async"
+              className={`w-[calc(100%_-_20px)] h-[calc(100%_-_20px)] ${item.type === "mobile" ? '!object-contain' : ''}`}
+              src={item.image} alt="" />
           </a>)
         }
       </div>

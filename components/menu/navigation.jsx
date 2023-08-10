@@ -33,10 +33,10 @@ const itemIds = [
     path: "/skills",
     name: "skill"
   },
-  {
-    path: "/https://web3-blog.netlify.app/",
-    name: "blog"
-  },
+  // {
+  //   path: "/https://web3-blog.netlify.app/",
+  //   name: "blog"
+  // },
   {
     path: "/contact",
     name: "contact"
