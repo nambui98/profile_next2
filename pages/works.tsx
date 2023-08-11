@@ -59,7 +59,7 @@ const Home: NextPage = () => {
     },
     {
       title: "Nextverse",
-      link: "https://nextverse.io/",
+      link: "https://nextverse.org/",
       image: "/assets/img/nextverse.png",
     },
     {
