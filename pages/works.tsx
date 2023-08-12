@@ -1,11 +1,6 @@
 import type { NextPage } from 'next'
-import { useRouter } from 'next/router'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.scss'
-import { Suspense } from 'react'
-import Loading from '../components/loading/Loading'
 import useTranslation from 'next-translate/useTranslation'
+import Head from 'next/head'
 const routes = [
   { path: '*', name: 'Home' },
   { path: '/', name: 'Home' },
@@ -20,8 +15,6 @@ type item = {
   type?: string
 }
 const Home: NextPage = () => {
-  const router = useRouter();
-  console.log(router.asPath);
   const { t } = useTranslation('common')
   const data: item[] = [
     {
